@@ -2,6 +2,20 @@
 #include <string>
 #include "DoublyLinkedList.h"
 using namespace std;
+class Person {
+   public:
+    string name;
+    int age;
+    Person() {}
+    Person(string name, int age) {
+        this->name = name;
+        this->age = age;
+    }
+    friend ostream& operator<<(ostream& os, const Person& p) {
+        os << p.name << " " << p.age << ";";
+        return os;
+    }
+};
 int main() {
     MyList<Person> list;
     Person p1("John", 30);

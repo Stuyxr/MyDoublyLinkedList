@@ -191,18 +191,4 @@ class MyList {
     MyIterator begin() { return MyIterator(head); }
     MyIterator end() { return MyIterator(nullptr); }
 };
-class Person {
-   public:
-    string name;
-    int age;
-    Person() {}
-    Person(string name, int age) {
-        this->name = name;
-        this->age = age;
-    }
-    friend ostream& operator<<(ostream& os, const Person& p) {
-        os << p.name << " " << p.age << ";";
-        return os;
-    }
-};
 # endif
